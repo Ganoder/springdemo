@@ -7,7 +7,8 @@ dog:
 person:
   name: "jack"
   age: 10
+
   dog:
-    name: "旺财"
+    name: ${person.goof:hello}_456
     age: 10
 
