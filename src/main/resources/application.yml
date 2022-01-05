@@ -1,0 +1,13 @@
+server:
+  port: 8081
+dog:
+  name: "旺财"
+  age: 10
+
+person:
+  name: "jack"
+  age: 10
+  dog:
+    name: "旺财"
+    age: 10
+
