@@ -1,5 +1,5 @@
 server:
-  port: 8081
+  port: 8082
 dog:
   name: "旺财"
   age: 10
@@ -11,3 +11,6 @@ person:
   dog:
     name: ${person.goof:hello}_456
     age: 10
+spring:
+  thymeleaf:
+    cache: false
