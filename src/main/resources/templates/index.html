@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<!--
+	Spectral by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>Spectral by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" th:href="@{/assets/css/main.css}">
+		<noscript><link rel="stylesheet" th:href="@{/assets/css/noscript.css}" /></noscript>
+	</head>
+	<body class="landing is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<h1><a th:href="@{index.html}">信息管理系统</a></h1>
+						<nav id="nav">
+							<ul>
+								<li class="special">
+									<a href="#menu" class="menuToggle"><span>菜 单</span></a>
+									<div id="menu">
+										<ul>
+											<li><a href="index.html">Home</a></li>
+											<li><a href="generic.html">Generic</a></li>
+											<li><a href="elements.html">Elements</a></li>
+											<li><a href="#">Sign Up</a></li>
+											<li><a th:href="@{login}">登陆</a></li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Banner -->
+					<section id="banner">
+						<div class="inner">
+							<h2>信息管理系统</h2>
+							<p>重庆大学<br />
+							大数据与软件学院<br />
+							项目地址  <a th:href="@{https://github.com/orgs/CQUstudentmanager/repositories}">Github</a>.</p>
+							<ul class="actions special">
+								<li><a th:href="@{#}" class="button primary">开始</a></li>
+							</ul>
+						</div>
+
+					</section>
+
+
+				<!-- Footer -->
+					<footer id="footer">
+						<ul class="icons">
+
+							<li><a th:href="@{http://www.changyao2@163.com}" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+						<ul class="copyright">
+							<li>&copy; Untitled</li><li>Design: <a th:href="@{https://github.com/orgs/CQUstudentmanager/}">CQUstudentmanager</a></li>
+						</ul>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script th:src="@{/assets/js/jquery.min.js}"></script>
+			<script th:src="@{/assets/js/jquery.scrollex.min.js}"></script>
+			<script th:src="@{/assets/js/jquery.scrolly.min.js}"></script>
+			<script th:src="@{/assets/js/browser.min.js}"></script>
+			<script th:src="@{/assets/js/breakpoints.min.js}"></script>
+			<script th:src="@{/assets/js/util.js}"></script>
+			<script th:src="@{/assets/js/main.js}"></script>
+
+	</body>
+</html>
