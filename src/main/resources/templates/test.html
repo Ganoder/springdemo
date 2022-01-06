@@ -7,5 +7,7 @@
 <body>
 hello 第一个Thymeleaf程序
 <div th:text="${name}">name是bigsai(我是离线数据)</div>
+<h1 th:each="user:${users}" >[[${user}]]</h1>
+<h1 th:each="user:${users}" th:text="${user}"></h1>
 </body>
 </html>
