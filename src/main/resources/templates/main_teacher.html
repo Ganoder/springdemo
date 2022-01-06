@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>人员信息管理系统</title>
+
+</head>
+<body>
+<h2>列表</h2>
+<div>
+    <a th:text="${emps}"></a>
+    <table >
+    <thead>
+
+
+    <tr th:each="emp:${emps}">
+        <td th:text="${emp.getId()}"></td>
+        <td th:text="${emp.getName()}"></td>
+        <td th:text="${emp.getSex()}"></td>
+        <td th:text="${emp.getEMAIL()}"></td>
+        <td th:text="${emp.getDepartment().getDepartment_name()}"></td>
+        <td th:text="${emp.getBirthday()}"></td>
+        <td th:text="${emp.getName()}">zh</td>
+    </tr>
+    </thead>
+
+
+
+
+</table></div>
+
+
+
+</body>
+<script>
+
+</script>
+</html>
