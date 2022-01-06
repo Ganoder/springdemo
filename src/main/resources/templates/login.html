@@ -18,10 +18,9 @@
 
     <!--为了保险起见，导入了本地的jquery和fontawesome    -->
     <!--jquery-->
-    <script type="text/javascript" th:src="@{js/jquery.validate.min.js}" ></script>
+
     <link rel="stylesheet" th:href="@{/assets/css/Login.css}">
     <!--font-awesome    -->
-    <link rel="stylesheet" th:href="@{font-awesome-4\7\0\css\font-awesome.min.css}">
 
 </head>
 
@@ -45,16 +44,19 @@
                 <!--        用超链接跳转到注册页面               -->
                 <div class="form-group">
                     <br>
-                    <a th:href="@{register}">没有账号？立即注册</a>
+                    <a th:href="@{/register}">没有账号？立即注册</a>
                 </div>
                 <!--         登录按钮           -->
-                <div class="form-group">
-                    <input type="submit" value="登录" class="btn btn-success pull-right">
+                <div th:action="@{/index}">
+
+                    <input th:type="submit" th:href="@{/userzhuye}" value="登录" class="btn btn-success pull-right">
                 </div>
 
             </div>
         </form>
     </div>
 </div>
+<!--<button th:href="@{index}">Github</button>-->
+<!--<button >TIJIAO</button>-->
 </body>
 </html>

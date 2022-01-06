@@ -9,10 +9,8 @@ import java.util.Arrays;
 
 @Controller
 public class indexcontroller {
-    @RequestMapping("/test")
-    public String test(Model model){
-        model.addAttribute("name","changyao");
-        model.addAttribute("users", Arrays.asList("changyao","nishuang"));
-        return "test";
+    @RequestMapping("/index")
+    public String test(){
+          return "index";
     }
 }
