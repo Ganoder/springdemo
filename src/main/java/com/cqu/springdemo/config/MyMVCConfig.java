@@ -17,6 +17,7 @@ public class MyMVCConfig implements WebMvcConfigurer {
     //这是用来控制视图的，讲白点就是将/changyao请求转移到test
     public void addViewControllers(ViewControllerRegistry registry) {
         registry.addViewController("/changyao").setViewName("index");
+
         registry.addViewController("/login2").setViewName("fangzhixielou");
 
 

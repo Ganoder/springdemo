@@ -20,7 +20,6 @@ public class EmployeeDao {
 
 
     }
-
 private static Integer initid=02;
     public void save(Employee employee){
         if(employee.getId()==null){
@@ -29,7 +28,7 @@ private static Integer initid=02;
         employee.setDepartment(departmentDao.getDepartmentid(employee.getDepartment().getId()));
         employeeMap.put(employee.getId(),employee);
     }
-    public static Collection<Employee> GETALL(){
+    public Collection<Employee> GETALL(){
         return employeeMap.values();
     }
     public Employee getemployeeid(Integer id){
@@ -38,11 +37,6 @@ private static Integer initid=02;
     public void deleteemployee(Integer id){
         employeeMap.remove(id);
 
-    }
-
-    public static void main(String[] args) {
-        Collection<Employee> employees=EmployeeDao.GETALL();
-        System.out.println(employees);
     }
 
 }

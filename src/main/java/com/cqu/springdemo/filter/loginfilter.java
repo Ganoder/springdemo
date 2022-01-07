@@ -13,7 +13,7 @@ public class loginfilter implements HandlerInterceptor {
 Object loginuser=request.getSession().getAttribute("loginuser");
 if(loginuser==null){
 request.setAttribute("msg","无权限");
-request.getRequestDispatcher("/login2").forward(request,response);
+request.getRequestDispatcher("/login").forward(request,response);
         return false;
     }else {return true;}
     }

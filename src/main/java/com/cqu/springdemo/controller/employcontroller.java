@@ -23,10 +23,6 @@ public class employcontroller {
         return "main_teacher";
     }
 
-    public static void main(String[] args) {
-        Collection<Employee> employees=EmployeeDao.GETALL();
-        System.out.println(employees);
-    }
 
 
 
