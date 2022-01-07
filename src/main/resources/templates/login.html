@@ -28,9 +28,8 @@
 
 <div class="container">
     <div class="form row">
-        <form class="form-horizontal col-sm-offset-3 col-md-offset-3" th:action="@{/login}">
+        <form class="form-horizontal col-sm-offset-3 col-md-offset-3">
             <h3 class="form-title">登录</h3>
-            <p th:text="${msg}" style="color: red" ></p>
             <div class="col-sm-9 col-md-9">
                 <div class="form-group">
                     <!--        用户名图标和用户名输入框            -->
@@ -48,9 +47,9 @@
                     <a th:href="@{/register}">没有账号？立即注册</a>
                 </div>
                 <!--         登录按钮           -->
-                <div th:action="@{/doc}">
+                <div th:action="@{/index}">
 
-                    <input th:type="submit"  value="登录" class="btn btn-success pull-right">
+                    <input th:type="submit" th:href="@{/userzhuye}" value="登录" class="btn btn-success pull-right">
                 </div>
 
             </div>
