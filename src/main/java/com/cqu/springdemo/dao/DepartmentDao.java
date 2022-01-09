@@ -19,7 +19,7 @@ public class DepartmentDao {
         departmentMap.put(1005,new Department("武装部",1005));
 
     }
-    public Collection<Department> getDepartment(){
+    public static Collection<Department> getDepartment(){
         return departmentMap.values();
     }
     public Department getDepartmentid(Integer ID){

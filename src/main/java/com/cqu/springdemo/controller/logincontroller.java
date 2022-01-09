@@ -1,11 +1,14 @@
 package com.cqu.springdemo.controller;
 
+import com.cqu.springdemo.dao.EmployeeDao;
+import com.cqu.springdemo.pojo.Employee;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpSession;
+import java.util.Collection;
 
 @Controller
 public class logincontroller {
@@ -22,8 +25,11 @@ public class logincontroller {
     public String LOGIN(@RequestParam("username") String username, @RequestParam("password") String password, Model model, HttpSession session){
         if (username.equals("159")&&password.equals("753")){
             session.setAttribute("loginuser",username);
+            Collection<Employee> employees= EmployeeDao.GETALL();
+            model.addAttribute("emps",employees);
+            return "main_teacher";
 
-            return "main_teacher";}else if(username.equals("123")&&password.equals("123"))
+        }else if(username.equals("123")&&password.equals("123"))
             {
                 session.setAttribute("loginuser",username);
                 return  "main_student";

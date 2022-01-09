@@ -16,7 +16,8 @@ public class EmployeeDao {
 
     static {
         employeeMap=new HashMap<Integer,Employee>();
-        employeeMap.put(1001,new Employee(01,"changyao","changyao@163.com",0,new Department("后勤部",1001),20211125));
+        employeeMap.put(1001,new Employee(01,"changyao","changyao@163.com",1,new Department("后勤部",1002),20211125));
+        employeeMap.put(1002,new Employee(01,"changyao","changyao@163.com",0,new Department("后勤部",1001),20211125));
 
 
     }
@@ -28,7 +29,7 @@ private static Integer initid=02;
         employee.setDepartment(departmentDao.getDepartmentid(employee.getDepartment().getId()));
         employeeMap.put(employee.getId(),employee);
     }
-    public Collection<Employee> GETALL(){
+    public static Collection<Employee> GETALL(){
         return employeeMap.values();
     }
     public Employee getemployeeid(Integer id){

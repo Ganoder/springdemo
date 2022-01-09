@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>人员信息管理系统</title>
+
+</head>
+<body>
+<h2>列表</h2>
+
+<form class="form-horizontal col-sm-offset-3 col-md-offset-3" th:action="@{addresult}">
+
+    <div class="form-group"><label>
+        department
+    </label>
+        <select class="form-control">
+            <tr th:each="dep:${departments}">
+                <option th:text="${dep.getDepartment_name()}" th:value="${dep.getId()}"></option>
+            </tr>
+        </select>
+
+    </div>
+    <div class="col-sm-9 col-md-9">
+
+        <div >
+
+            <input th:type="submit"  value="登录" class="btn btn-success pull-right">
+        </div>
+
+    </div>
+</form>
+
+
+</body>
+<script>
+
+</script>
+</html>
