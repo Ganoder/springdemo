@@ -6,15 +6,28 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import javax.sql.DataSource;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
 @SpringBootTest
 class SpringdemoApplicationTests {
     @Autowired
-    private Dog dog;
-    @Autowired
-    private Person person;
+    DataSource dataSource;
     @Test
     void contextLoads() {
-        System.out.println(person);
+        System.out.println(dataSource.getClass());
+        try {
+            Connection connection= dataSource.getConnection();
+            System.out.println(connection);
+            ResultSet resultSet;
+            connection.close();
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
 
 
     }
